@@ -1,4 +1,4 @@
-# 🧠 Second Brain - Personal Knowledge Management (PKM)
+# Second Brain - Personal Knowledge Management (PKM)
 
 Welcome to my **Second Brain**, a digital garden built for Obsidian to capture, organize, and synthesize knowledge, ideas, projects, and learning journeys.
 
@@ -6,7 +6,7 @@ This vault is structured to facilitate seamless knowledge retrieval and note-tak
 
 ---
 
-## 📂 Vault Structure
+## Vault Structure
 
 Here is a map of how the knowledge base is structured:
 
@@ -43,7 +43,7 @@ graph TD
 
 ---
 
-## 🛠️ Getting Started with Obsidian
+## Getting Started with Obsidian
 
 To open this vault in Obsidian:
 
@@ -57,7 +57,7 @@ To open this vault in Obsidian:
 
 ---
 
-## ✨ Features & Best Practices
+## Features & Best Practices
 
 To make notes readable, functional, and visually appealing, this vault follows these markdown guidelines:
 
