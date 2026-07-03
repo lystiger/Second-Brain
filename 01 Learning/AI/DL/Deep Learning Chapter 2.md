@@ -135,6 +135,23 @@ The training loop is therefore:
 4. **Update parameters:** Apply gradient descent or another optimizer.
 5. **Repeat:** Continue across mini-batches and epochs.
 
+![[Pasted image 20260703223631.png]]
+
+![[Pasted image 20260703223706.png]]
+
+For a single training example, backpropagation determines how each weight and bias contributes to the loss and how each parameter should be nudged to reduce it.
+
+The result is not an immediate parameter update. Instead, backpropagation computes the **relative size and direction** of the changes that would most rapidly decrease the loss:
+
+- The **sign** of a gradient component indicates whether its parameter should increase or decrease.
+- The **magnitude** indicates how strongly changing that parameter would affect the loss.
+- The **relative proportions** show which parameters should change more than others.
+
+During mini-batch training, the gradients from multiple examples are averaged or summed. The optimizer then uses the learning rate to convert that combined gradient into an actual update.
+
+> [!NOTE]
+> **Backpropagation computes the gradients; the optimizer applies the updates.** They are related steps, but they are not the same algorithm.
+
 ## Important Limitations
 
 Neural-network cost surfaces are generally **non-convex**. They can contain local minima, saddle points, flat regions, and steep regions. Gradient descent is not guaranteed to find the absolute global minimum.
