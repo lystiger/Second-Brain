@@ -1,6 +1,6 @@
 # Machine Learning Fundamentals
 
-Machine Learning is a classic but essential branch of AI that allows systems to learn patterns from data and make predictions.
+**Machine learning (ML)** is a branch of AI in which systems learn patterns from data to make predictions or decisions.
 
 ---
 
@@ -25,59 +25,51 @@ mindmap
 ---
 
 ## 1. Supervised Learning
+
 In supervised learning, models are trained on **labeled data**.
 
 $$\text{Input } (X) \longrightarrow \text{Model} \longrightarrow \text{Prediction } (\hat{y}) \longleftrightarrow \text{Label } (y)$$
 
-* **Core Idea**: The algorithm learns a mapping function from input variables to the target output variable.
-* **Common Models**:
-  * Logistic Regression
-  * Random Forest
-  * Support Vector Machines (SVM)
-  * Convolutional Neural Networks (CNN)
-* **Real-World Applications**:
-  * **Defect Detection**: Identifying faulty items on a production line.
-  * **Weather Prediction**: Forecasting temperature based on historical conditions.
+- **Core idea:** Learn a mapping from input variables to a target output.
+- **Common models:** Logistic regression, random forests, support vector machines (SVMs), and neural networks.
+- **Applications:** Defect detection and weather prediction.
 
 ---
 
 ## 2. Unsupervised Learning
+
 In unsupervised learning, the model is given **unlabeled data** and must discover hidden patterns and structures on its own.
 
-* **Core Idea**: Finding inherent groupings or representations in the data without human guidance.
-* **Common Models**:
-  * **Clustering**: K-Means, DBSCAN
-  * **Dimensionality Reduction**: Principal Component Analysis (PCA), t-SNE
-* **Real-World Applications**:
-  * **Customer Segmentation**: Clustering customers based on purchasing behavior.
-  * **Anomaly Detection**: Identifying unusual transactions or behaviors.
+- **Core idea:** Discover useful groupings or representations without target labels.
+- **Common methods:**
+  - **Clustering:** k-means and DBSCAN
+  - **Dimensionality reduction:** principal component analysis (PCA) and t-SNE
+- **Applications:** Customer segmentation and anomaly detection.
 
 ---
 
 ## 3. Reinforcement Learning (RL)
+
 Reinforcement learning uses a **penalty-reward feedback loop** to train an agent to make a sequence of decisions in an environment.
 
-* **Core Idea**: Maximize cumulative reward through trial and error.
-* **Key Components**: Agent, Environment, State, Action, Reward.
-* **Real-World Applications**:
-  * **Robotics**: Training robots to walk or grasp objects.
-  * **Autonomous Vehicles**: Self-driving cars navigating traffic.
-  * **Game AI**: Systems like AlphaGo beating human champions.
+- **Core idea:** Maximize cumulative reward through interaction with an environment.
+- **Key components:** Agent, environment, state, action, and reward.
+- **Applications:** Robotics, autonomous systems, and game-playing agents.
 
 ---
 
 ## 4. Regression vs. Classification
 
-Within Supervised Learning, tasks are divided based on the nature of the target variable:
+Within supervised learning, tasks are commonly divided according to the target variable:
 
 | Feature | Regression | Classification |
 | :--- | :--- | :--- |
 | **Target Variable** | Continuous numerical value | Discrete class labels / categories |
-| **Output Example** | Price, Temperature, Age | Cat vs. Dog, Spam vs. Not Spam, Good vs. Bad |
-| **Algorithms** | Linear Regression, Decision Trees | Logistic Regression, Random Forest, SVM |
+| **Output example** | Price, temperature, age | Cat vs. dog, spam vs. not spam |
+| **Algorithms** | Linear regression, regression trees | Logistic regression, classification trees, SVM |
 
 ---
 
 > [!NOTE]
 > ### Best Practices
-> Before feeding data to any ML model, always ensure that proper **preprocessing**, **feature extraction**, and **data splitting** (Train/Validation/Test) are performed. Understanding your data and selecting the appropriate model architecture is the key to ML success.
+> Before training an ML model, define the evaluation strategy and split the data into training, validation, and test sets. Fit preprocessing and feature-extraction steps using the training set only to avoid data leakage.

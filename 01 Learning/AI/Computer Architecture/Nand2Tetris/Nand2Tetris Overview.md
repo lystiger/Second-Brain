@@ -1,31 +1,51 @@
 # Nand2Tetris Overview
 
-## Build a computer from scratch
-**Main components:** `ROM > CPU > RAM`
+## Building a Computer from Scratch
 
-### Big picture
+The main hardware components are **ROM, CPU, and RAM**.
 
-`Human thought` -> (write a program) -> `Abstraction: High level language` -> (compiler) -> `Abstraction: VM Code` -> (VM Translator) -> `Abstraction: Low level code` -> (Assembler) -> `Abstraction: Computer Architecture` -> (Digital Design) -> `CPU, RAM, Chipset` -> (Logic Gate) -> `Abstraction: Elementary logic gates` -> (Electrical Engineering) -> `Chip, Resistor, Capacitor, Solid states`
+### The Big Picture
 
-However, solid states are not my specialty, so we start from **NAND gates**.
+```text
+Human thought
+  -> high-level language
+  -> compiler
+  -> VM code
+  -> VM translator
+  -> assembly language
+  -> assembler
+  -> machine code
+  -> computer architecture
+  -> digital design
+  -> CPU, RAM, and chipset
+  -> logic gates
+  -> elementary logic gates
+  -> electrical components
+```
 
-## Building a chip
-**Xor**: outputs 1 if exactly one of its inputs is 1, otherwise outputs 0.
+Nand2Tetris begins at the **NAND-gate abstraction**, leaving the transistor-level implementation to electrical engineering.
 
-| a | b | out |
-|---|---|-----|
-| 0 | 0 |  0  |
-| 0 | 1 |  1  |
-| 1 | 0 |  1  |
-| 1 | 1 |  0  |
+## Building a Chip
 
-### Chip diagram:
+An **XOR** gate outputs `1` when exactly one input is `1`; otherwise, it outputs `0`.
+
+| `a` | `b` | `out` |
+| ---: | ---: | ----: |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+### Chip Diagram
+
 ![[Pasted image 20260702160644.png]]
 
-> Use HDL (hardware description language)
+> Chips are specified using a hardware description language (HDL).
 
-### Assembly code
+### Assembly Code
+
 ![[Pasted image 20260702161531.png]]
 
-### Binary code
+### Binary Code
+
 ![[Pasted image 20260702161559.png]]
