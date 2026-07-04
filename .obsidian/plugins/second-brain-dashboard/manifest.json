@@ -1,0 +1,9 @@
+{
+  "id": "second-brain-dashboard",
+  "name": "Second Brain Dashboard",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Keeps the Home dashboard clock and date live.",
+  "author": "Second Brain",
+  "isDesktopOnly": false
+}

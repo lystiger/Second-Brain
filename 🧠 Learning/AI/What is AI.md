@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: artificial-intelligence
+maturity: growing
+created: 2026-07-01
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, ai]
+---
+
 # What Is Artificial Intelligence?
 
 ## Related Notes

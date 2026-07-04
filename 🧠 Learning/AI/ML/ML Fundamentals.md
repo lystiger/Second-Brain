@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: machine-learning
+maturity: growing
+created: 2026-07-01
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, machine-learning]
+---
+
 # Machine Learning Fundamentals
 
 ## Related Notes

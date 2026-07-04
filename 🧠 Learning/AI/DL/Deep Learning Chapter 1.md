@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: deep-learning
+maturity: growing
+created: 2026-07-02
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, deep-learning]
+---
+
 # Deep Learning — Chapter 1: Neural Networks
 
 ## Related Notes

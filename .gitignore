@@ -5,9 +5,16 @@
 
 # Obsidian machine-local state and installed packages
 .obsidian/cache/
-.obsidian/community-plugins.json
 .obsidian/logs/
-.obsidian/plugins/
+.obsidian/plugins/*
+!.obsidian/plugins/homepage/
+.obsidian/plugins/homepage/*
+!.obsidian/plugins/homepage/data.json
+!.obsidian/plugins/templater-obsidian/
+.obsidian/plugins/templater-obsidian/*
+!.obsidian/plugins/templater-obsidian/data.json
+!.obsidian/plugins/second-brain-dashboard/
+!.obsidian/plugins/second-brain-dashboard/**
 .obsidian/themes/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json

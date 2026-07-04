@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: deep-learning
+maturity: seedling
+created: 2026-07-03
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, deep-learning]
+---
+
 # Deep Learning — Chapter 3
 
 ## Related Notes

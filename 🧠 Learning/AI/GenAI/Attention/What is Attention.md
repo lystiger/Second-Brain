@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: generative-ai
+maturity: growing
+created: 2026-07-04
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, attention, transformer]
+---
+
 # What Is Attention?
 
 ## Related Notes

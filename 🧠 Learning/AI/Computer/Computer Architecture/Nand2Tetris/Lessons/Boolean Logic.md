@@ -1,3 +1,14 @@
+---
+type: knowledge
+status: evergreen
+area: computer-architecture
+maturity: growing
+created: 2026-07-02
+updated: 2026-07-04
+owner: Lystiger
+tags: [knowledge, boolean-logic, nand2tetris]
+---
+
 # Boolean Logic
 
 ## Related Notes

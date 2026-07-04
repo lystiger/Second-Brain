@@ -1,0 +1,8 @@
+{
+  "templates_folder": "🧩 Templates",
+  "trigger_on_file_creation": false,
+  "enable_folder_templates": false,
+  "folder_templates": [],
+  "command_timeout": 5,
+  "startup_templates": []
+}
