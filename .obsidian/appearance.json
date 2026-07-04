@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
-    "graph-lines"
-  ]
+    "graph-lines",
+    "home-dashboard"
+  ],
+  "cssTheme": "Minimal"
 }
