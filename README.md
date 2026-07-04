@@ -2,12 +2,12 @@
 
 ## Vault Map
 
-- [[00 Inbox/First words !|Welcome / Inbox]]
-- [[01 Learning/AI/What is AI|Artificial Intelligence]]
-- [[01 Learning/AI/ML/ML Fundamentals|Machine Learning]]
-- [[01 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning]]
-- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Nand2Tetris Overview|Nand2Tetris]]
-- [[04 Career/AI Systems Architect Roadmap|Career Roadmap]]
+- [[📥 Inbox/First words !|Welcome / Inbox]]
+- [[🧠 Learning/AI/What is AI|Artificial Intelligence]]
+- [[🧠 Learning/AI/ML/ML Fundamentals|Machine Learning]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning]]
+- [[🧠 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Nand2Tetris Overview|Nand2Tetris]]
+- [[💼 Career/AI Systems Architect Roadmap|Career Roadmap]]
 
 Welcome to my **Second Brain**, a digital garden built for Obsidian to capture, organize, and synthesize knowledge, ideas, projects, and learning journeys.
 
@@ -21,16 +21,16 @@ Here is a map of how the knowledge base is structured:
 
 ```mermaid
 graph TD
-    Root[Second Brain] --> Inbox[00 Inbox]
-    Root --> Learning[01 Learning]
-    Root --> Projects[02 Projects]
-    Root --> Papers[03 Research Papers]
-    Root --> Career[04 Career]
-    Root --> Books[05 Books]
-    Root --> Templates[06 Templates]
-    Root --> Desires[07 Desires]
-    Root --> Journal[08 Journal]
-    Root --> Resources[09 Resources]
+    Root[Second Brain] --> Inbox[📥 Inbox]
+    Root --> Learning[🧠 Learning]
+    Root --> Projects[🚀 Projects]
+    Root --> Papers[📄 Research Papers]
+    Root --> Career[💼 Career]
+    Root --> Books[📚 Books]
+    Root --> Templates[🧩 Templates]
+    Root --> Desires[✨ Desires]
+    Root --> Journal[📓 Journal]
+    Root --> Resources[🗂️ Resources]
     Root --> MLOps[MLops]
 ```
 
@@ -38,16 +38,16 @@ graph TD
 
 | Folder | Purpose | Examples / Subfolders |
 | :--- | :--- | :--- |
-| **`00 Inbox`** | Rapid capture of raw notes, thoughts, and links before processing. | `First words !.md` |
-| **`01 Learning`** | Deep dives, educational courses, concepts, and technical skills. | `AI/`, `AI/ML/Data processing.md` |
-| **`02 Projects`** | Active projects with defined deadlines and outcomes. | `AOI/`, `HASC/`, `RAInder/`, `SignGlove/` |
-| **`03 Research Papers`**| Summaries, key insights, and analysis of academic papers. | Literature reviews, arXiv notes |
-| **`04 Career`** | Resume versions, job hunt trackers, and professional goals. | Career roadmaps |
-| **`05 Books`** | Reading logs, highlights, and book reviews. | Summaries of non-fiction & fiction |
-| **`06 Templates`** | Standardized templates to maintain consistency across notes. | Daily logs, project templates |
-| **`07 Desires`** | Wishlists, target acquisitions, and bucket lists. | Tool lists, gadgets, skills to acquire |
-| **`08 Journal`** | Daily logs, weekly reviews, and personal reflections. | Periodic journals |
-| **`09 Resources`** | General references, tools, cheat sheets, and useful utilities. | Cheat sheets, documentation bookmarks |
+| **`📥 Inbox`** | Rapid capture of raw notes, thoughts, and links before processing. | `First words !.md` |
+| **`🧠 Learning`** | Deep dives, educational courses, concepts, and technical skills. | `AI/`, `AI/ML/Data processing.md` |
+| **`🚀 Projects`** | Active projects with defined deadlines and outcomes. | `AOI/`, `HASC/`, `RAInder/`, `SignGlove/` |
+| **`📄 Research Papers`**| Summaries, key insights, and analysis of academic papers. | Literature reviews, arXiv notes |
+| **`💼 Career`** | Resume versions, job hunt trackers, and professional goals. | Career roadmaps |
+| **`📚 Books`** | Reading logs, highlights, and book reviews. | Summaries of non-fiction & fiction |
+| **`🧩 Templates`** | Standardized templates to maintain consistency across notes. | Daily logs, project templates |
+| **`✨ Desires`** | Wishlists, target acquisitions, and bucket lists. | Tool lists, gadgets, skills to acquire |
+| **`📓 Journal`** | Daily logs, weekly reviews, and personal reflections. | Periodic journals |
+| **`🗂️ Resources`** | General references, tools, cheat sheets, and useful utilities. | Cheat sheets, documentation bookmarks |
 | **`MLops`** | Notes on MLOps pipelines, model deployment, monitoring, and infrastructure.| CI/CD pipelines, Docker, Kubernetes |
 
 ---

@@ -2,10 +2,10 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/DL/Deep Learning Chapter 2|Cost and Gradient Descent]]
-- [[01 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
-- [[01 Learning/AI/ML/Data processing|Data Processing Pipeline]]
-- [[01 Learning/AI/ML/Famous models|Famous Machine-Learning Models]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 2|Cost and Gradient Descent]]
+- [[🧠 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
+- [[🧠 Learning/AI/ML/Data processing|Data Processing Pipeline]]
+- [[🧠 Learning/AI/ML/Famous models|Famous Machine-Learning Models]]
 
 Evaluation measures how well a trained model performs on data it did not learn from. There is no single metric for all deep-learning models: the correct metric depends on the **task**, **output type**, **class balance**, and **cost of different errors**.
 

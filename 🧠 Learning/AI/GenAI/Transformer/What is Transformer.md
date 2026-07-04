@@ -2,12 +2,12 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/GenAI/Attention/What is Attention|What Is Attention?]]
-- [[01 Learning/AI/What is AI|What Is Artificial Intelligence?]]
-- [[01 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
-- [[01 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
+- [[🧠 Learning/AI/GenAI/Attention/What is Attention|What Is Attention?]]
+- [[🧠 Learning/AI/What is AI|What Is Artificial Intelligence?]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
+- [[🧠 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
 
-A **Transformer** is a neural-network architecture designed to process sequences using [[01 Learning/AI/GenAI/Attention/What is Attention|attention]]. Unlike recurrent neural networks, it can process all tokens in a sequence in parallel during training while still learning relationships between distant tokens.
+A **Transformer** is a neural-network architecture designed to process sequences using [[🧠 Learning/AI/GenAI/Attention/What is Attention|attention]]. Unlike recurrent neural networks, it can process all tokens in a sequence in parallel during training while still learning relationships between distant tokens.
 
 Transformers are the foundation of most modern frontier language models. **GPT** stands for **Generative Pre-trained Transformer**:
 
@@ -40,7 +40,7 @@ Attention lets tokens exchange relevant information. It converts context-free to
 
 ![[Pasted image 20260704113425.png]]
 
-See [[01 Learning/AI/GenAI/Attention/What is Attention|What Is Attention?]] for queries, keys, values, and causal masking.
+See [[🧠 Learning/AI/GenAI/Attention/What is Attention|What Is Attention?]] for queries, keys, values, and causal masking.
 
 ### 3. Feed-Forward Network
 

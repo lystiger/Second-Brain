@@ -1,25 +1,37 @@
-# Obsidian cache
-.obsidian/cache/
+# Local agent/editor state
+.agents/
+.idea/
+.vscode/
 
-# Workspace (personal window layout)
+# Obsidian machine-local state and installed packages
+.obsidian/cache/
+.obsidian/community-plugins.json
+.obsidian/logs/
+.obsidian/plugins/
+.obsidian/themes/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+.obsidian/workspace*.json
+.trash/
 
-# OS
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# RenderCV generated/intermediate output
+rendercv_output/
+💼 Career/CV/*
+!💼 Career/CV/Do_Hung_Anh_CV.pdf
+
+# OS and temporary files
 .DS_Store
 Thumbs.db
-
-# venv
-venv/
-
-# RenderCV intermediate output (final CV files are copied into 04 Career/CV)
-rendercv_output/
-
-# CV build sources and support files; keep only the final PDF
-04 Career/CV/*
-!04 Career/CV/Do_Hung_Anh_CV.pdf
-.venv/
-
-# requirements
-requirements.txt
-rendercv_output
+Desktop.ini
+*.tmp
+*.temp
+*~

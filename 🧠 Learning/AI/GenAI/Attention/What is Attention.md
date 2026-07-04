@@ -2,9 +2,9 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/GenAI/Transformer/What is Transformer|What Is a Transformer?]]
-- [[01 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
-- [[01 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
+- [[🧠 Learning/AI/GenAI/Transformer/What is Transformer|What Is a Transformer?]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
+- [[🧠 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
 
 **Attention** is a mechanism that lets each token gather information from other relevant tokens. In intuitive terms, it allows token vectors to “talk” to one another and update their representations using context.
 
@@ -55,4 +55,4 @@ Decoder-only language models such as GPT apply a **causal mask**. A token may at
 
 ## Key Idea
 
-Attention does not directly retrieve words. It mixes information carried by token vectors according to learned relevance scores. The output is then processed by the rest of the [[01 Learning/AI/GenAI/Transformer/What is Transformer|Transformer]] block.
+Attention does not directly retrieve words. It mixes information carried by token vectors according to learned relevance scores. The output is then processed by the rest of the [[🧠 Learning/AI/GenAI/Transformer/What is Transformer|Transformer]] block.

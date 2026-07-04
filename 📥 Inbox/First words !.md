@@ -3,8 +3,8 @@
 ## Related Notes
 
 - [[README|Vault Map]]
-- [[01 Learning/AI/What is AI|What Is Artificial Intelligence?]]
-- [[04 Career/AI Systems Architect Roadmap|AI Systems Architect Roadmap]]
+- [[🧠 Learning/AI/What is AI|What Is Artificial Intelligence?]]
+- [[💼 Career/AI Systems Architect Roadmap|AI Systems Architect Roadmap]]
 
 Hi, I'm **Lystiger**!
 

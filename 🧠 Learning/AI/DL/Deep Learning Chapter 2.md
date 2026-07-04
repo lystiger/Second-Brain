@@ -2,9 +2,9 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/DL/Deep Learning Chapter 1|Chapter 1: Neural Networks]]
-- [[01 Learning/AI/DL/Deep Learning Chapter 3|Chapter 3]]
-- [[01 Learning/AI/DL/Evaluation|Evaluating Deep-Learning Models]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Chapter 1: Neural Networks]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 3|Chapter 3]]
+- [[🧠 Learning/AI/DL/Evaluation|Evaluating Deep-Learning Models]]
 
 Training a neural network means finding the **weights and biases** that make its predictions as accurate as possible. To do that, we need:
 

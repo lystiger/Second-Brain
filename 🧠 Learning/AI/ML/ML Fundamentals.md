@@ -2,11 +2,11 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/What is AI|What Is Artificial Intelligence?]]
-- [[01 Learning/AI/ML/Data processing|Data Processing Pipeline]]
-- [[01 Learning/AI/ML/Famous models|Famous Machine-Learning Models]]
-- [[01 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning: Neural Networks]]
-- [[01 Learning/AI/DL/Evaluation|Model Evaluation]]
+- [[🧠 Learning/AI/What is AI|What Is Artificial Intelligence?]]
+- [[🧠 Learning/AI/ML/Data processing|Data Processing Pipeline]]
+- [[🧠 Learning/AI/ML/Famous models|Famous Machine-Learning Models]]
+- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning: Neural Networks]]
+- [[🧠 Learning/AI/DL/Evaluation|Model Evaluation]]
 
 **Machine learning (ML)** is a branch of AI in which systems learn patterns from data to make predictions or decisions.
 

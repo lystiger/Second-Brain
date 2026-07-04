@@ -2,11 +2,11 @@
 
 ## Related Notes
 
-- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Lessons/Boolean Logic|Boolean Logic]]
-- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Lessons/Boolean Function Synthesis|Boolean Function Synthesis]]
-- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Projects/Project 0|Project 0]]
-- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Projects/Project 1|Project 1]]
-- [[01 Learning/AI/What is AI|AI Learning Map]]
+- [[🧠 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Lessons/Boolean Logic|Boolean Logic]]
+- [[🧠 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Lessons/Boolean Function Synthesis|Boolean Function Synthesis]]
+- [[🧠 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Projects/Project 0|Project 0]]
+- [[🧠 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Projects/Project 1|Project 1]]
+- [[🧠 Learning/AI/What is AI|AI Learning Map]]
 
 ## Building a Computer from Scratch
 
