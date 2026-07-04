@@ -1,5 +1,12 @@
 # Deep Learning — Chapter 1: Neural Networks
 
+## Related Notes
+
+- [[01 Learning/AI/What is AI|What Is Artificial Intelligence?]]
+- [[01 Learning/AI/ML/ML Fundamentals|Machine Learning Fundamentals]]
+- [[01 Learning/AI/DL/Deep Learning Chapter 2|Chapter 2: Cost and Gradient Descent]]
+- [[01 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
+
 Consider a neural network that learns to recognize handwritten digits from the bottom up.
 
 ## Neurons and Activations

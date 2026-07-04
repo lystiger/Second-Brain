@@ -1,5 +1,11 @@
 # Deep Learning — Chapter 2: Cost and Gradient Descent
 
+## Related Notes
+
+- [[01 Learning/AI/DL/Deep Learning Chapter 1|Chapter 1: Neural Networks]]
+- [[01 Learning/AI/DL/Deep Learning Chapter 3|Chapter 3]]
+- [[01 Learning/AI/DL/Evaluation|Evaluating Deep-Learning Models]]
+
 Training a neural network means finding the **weights and biases** that make its predictions as accurate as possible. To do that, we need:
 
 1. A way to measure how wrong the network is: the **cost function**.

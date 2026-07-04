@@ -1,5 +1,11 @@
 # Welcome to My Second Brain
 
+## Related Notes
+
+- [[README|Vault Map]]
+- [[01 Learning/AI/What is AI|What Is Artificial Intelligence?]]
+- [[04 Career/AI Systems Architect Roadmap|AI Systems Architect Roadmap]]
+
 Hi, I'm **Lystiger**!
 
 I'm passionate about exploring new technologies, building AI-driven applications, and continuously learning. This space serves as my digital garden where I document my thoughts, projects, and learning journey.

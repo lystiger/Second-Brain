@@ -1,5 +1,12 @@
 # What Is Artificial Intelligence?
 
+## Related Notes
+
+- [[01 Learning/AI/ML/ML Fundamentals|Machine Learning Fundamentals]]
+- [[01 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
+- [[04 Career/AI Systems Architect Roadmap|AI Systems Architect Roadmap]]
+- [[README|Vault Map]]
+
 **Artificial intelligence (AI)** is the broad field of building systems that can perform tasks associated with intelligent behavior, such as reasoning, learning, perception, planning, and decision-making.
 
 I think of AI as systems capable of:

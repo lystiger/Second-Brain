@@ -1,0 +1,10 @@
+body {
+  --graph-line: #52de54;
+  --graph-line-highlight: #ffcc66;
+  --graph-arrow: #ffcc66;
+  --graph-node: #a78bfa;
+  --graph-node-focused: #ffcc66;
+  --graph-node-tag: #9ece6a;
+  --graph-node-attachment: #bb9af7;
+  --graph-node-unresolved: #f7768e;
+}

@@ -1,5 +1,14 @@
 # Second Brain - Personal Knowledge Management (PKM)
 
+## Vault Map
+
+- [[00 Inbox/First words !|Welcome / Inbox]]
+- [[01 Learning/AI/What is AI|Artificial Intelligence]]
+- [[01 Learning/AI/ML/ML Fundamentals|Machine Learning]]
+- [[01 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning]]
+- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Nand2Tetris Overview|Nand2Tetris]]
+- [[04 Career/AI Systems Architect Roadmap|Career Roadmap]]
+
 Welcome to my **Second Brain**, a digital garden built for Obsidian to capture, organize, and synthesize knowledge, ideas, projects, and learning journeys.
 
 This vault is structured to facilitate seamless knowledge retrieval and note-taking, heavily inspired by modern productivity frameworks (like P.A.R.A. and Johnny.Decimal).

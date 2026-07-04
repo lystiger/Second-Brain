@@ -1,5 +1,12 @@
 # Famous Deep-Learning Models and Architectures
 
+## Related Notes
+
+- [[01 Learning/AI/DL/Deep Learning Chapter 1|Neural Networks]]
+- [[01 Learning/AI/DL/Evaluation|Evaluating Deep-Learning Models]]
+- [[01 Learning/AI/ML/Famous models|Famous Machine-Learning Models]]
+- [[What is Transformer|Transformers]]
+
 Deep-learning models learn hierarchical representations directly from data. The best architecture depends more on the data modality and task than on which model is newest or largest.
 
 ## Quick Selection Guide

@@ -1,5 +1,11 @@
 # Boolean Logic
 
+## Related Notes
+
+- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Nand2Tetris Overview|Nand2Tetris Overview]]
+- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Lessons/Boolean Function Synthesis|Boolean Function Synthesis]]
+- [[01 Learning/AI/Computer/Computer Architecture/Nand2Tetris/Projects/Project 1|Project 1]]
+
 #Boolean
 
 ## Boolean Operations

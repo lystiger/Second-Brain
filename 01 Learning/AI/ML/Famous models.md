@@ -1,5 +1,12 @@
 # Famous Machine-Learning Models
 
+## Related Notes
+
+- [[01 Learning/AI/ML/ML Fundamentals|Machine Learning Fundamentals]]
+- [[01 Learning/AI/ML/Data processing|Data Processing Pipeline]]
+- [[01 Learning/AI/DL/Famous models|Famous Deep-Learning Models]]
+- [[01 Learning/AI/DL/Evaluation|Model Evaluation]]
+
 Classical machine-learning models are often the best starting point for structured or tabular data. They usually require less data and compute than deep neural networks, train quickly, and can provide strong, interpretable baselines.
 
 ## Quick Selection Guide
