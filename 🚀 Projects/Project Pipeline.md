@@ -11,16 +11,16 @@ tags: [projects, kanban]
 
 ## Planning
 
-- [ ] [[🚀 Projects/RAInder/RAInder]]
+- [ ] [[🚀 Projects/RAInder/RAInder|RAInder]]
 
 ## Doing
 
-- [ ] [[🚀 Projects/AOI/AOI]]
-- [ ] [[🚀 Projects/SilentVoix/SilentVoix]]
-- [ ] [[🚀 Projects/Elysia/Elysia]]
-- [ ] [[🚀 Projects/HASC/HASC]]
-- [ ] [[🚀 Projects/TempCastML/TempCastML]]
-- [ ] [[🚀 Projects/Vietnam AI Challenge/Vietnam AI Challenge]]
+- [ ] [[🚀 Projects/AOI/AOI|AOI]]
+- [ ] [[🚀 Projects/SilentVoix/SilentVoix|SilentVoix]]
+- [ ] [[🚀 Projects/Elysia/Elysia|Elysia]]
+- [ ] [[🚀 Projects/HASC/HASC|HASC]]
+- [ ] [[🚀 Projects/TempCastML/TempCastML|TempCastML]]
+- [ ] [[🚀 Projects/Vietnam AI Challenge/Vietnam AI Challenge|Vietnam AI Challenge]]
 
 ## Testing
 

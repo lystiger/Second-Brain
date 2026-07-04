@@ -10,6 +10,9 @@
 !.obsidian/plugins/homepage/
 .obsidian/plugins/homepage/*
 !.obsidian/plugins/homepage/data.json
+!.obsidian/plugins/dataview/
+.obsidian/plugins/dataview/*
+!.obsidian/plugins/dataview/data.json
 !.obsidian/plugins/templater-obsidian/
 .obsidian/plugins/templater-obsidian/*
 !.obsidian/plugins/templater-obsidian/data.json

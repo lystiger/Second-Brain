@@ -12,7 +12,7 @@ tags: [os, plugins]
 
 | Plugin | Purpose | Policy |
 |---|---|---|
-| Dataview | Metadata dashboards and indexes | Prefer DQL; avoid DataviewJS unless necessary |
+| Dataview | Metadata dashboards and indexes | Prefer DQL; DataviewJS is enabled for the project charts only |
 | Tasks | Due dates, recurring tasks, global task queries | Tasks stay in their project/context note |
 | Templater | Metadata-safe note creation | Templates live in `🧩 Templates` |
 | Kanban | Visual project flow | Markdown remains source of truth |
@@ -27,6 +27,8 @@ Installed versions at architecture time: Dataview 0.5.68, Tasks 8.2.2, Templater
 - **Local REST API:** reserve for Elysia integration; never commit its API key or certificate material.
 - **Excalidraw:** architecture sketches when text or Mermaid is insufficient.
 - **Iconize:** navigation cosmetics only.
+- **Second Brain Dashboard:** provides the live homepage clock.
+- **Chart.js:** version 4.5.1 is stored in `🗂️ Resources/Scripts` and loaded locally by the project DataviewJS dashboard, with a CDN fallback.
 
 ## Core Settings
 
@@ -35,6 +37,7 @@ Installed versions at architecture time: Dataview 0.5.68, Tasks 8.2.2, Templater
 - Daily notes use `📓 Journal/Daily/YYYY-MM-DD.md`.
 - Both core Templates and Templater point to `🧩 Templates`.
 - Automatic link updates remain enabled.
+- Block-level DataviewJS is enabled; inline JavaScript remains disabled.
 
 ## Security
 

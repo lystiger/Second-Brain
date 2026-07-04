@@ -14,6 +14,58 @@ updated: 2026-07-04
   <div class="home-date">LOCAL TIME</div>
 </div>
 
+```dataviewjs
+(() => {
+  // Keep this renderer invisible; it only drives the masthead clock.
+  dv.container.classList.add("home-clock-runtime");
+
+  const view = dv.container.closest(".markdown-preview-view, .markdown-source-view") ?? document;
+  const clock = view.querySelector(".home-clock");
+  const dateElement = view.querySelector(".home-date");
+
+  if (!clock || !dateElement) return;
+
+  const weekdays = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+  const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+    const time = `${hours}:${minutes}:${seconds}`;
+
+    if (clock.textContent !== time) {
+      const separatorOne = document.createElement("span");
+      const separatorTwo = document.createElement("span");
+      separatorOne.textContent = ":";
+      separatorTwo.textContent = ":";
+      clock.replaceChildren(
+        document.createTextNode(hours),
+        separatorOne,
+        document.createTextNode(minutes),
+        separatorTwo,
+        document.createTextNode(seconds)
+      );
+      clock.setAttribute("aria-label", `Current local time: ${time}`);
+    }
+
+    dateElement.textContent = `${weekdays[now.getDay()]} · ${String(now.getDate()).padStart(2, "0")} ${months[now.getMonth()]} ${now.getFullYear()}`;
+  }
+
+  updateClock();
+  const timer = window.setInterval(updateClock, 1000);
+
+  // Stop the interval when Dataview unloads or rerenders this note.
+  const cleanupObserver = new MutationObserver(() => {
+    if (dv.container.isConnected) return;
+    window.clearInterval(timer);
+    cleanupObserver.disconnect();
+  });
+  cleanupObserver.observe(document.body, { childList: true, subtree: true });
+})();
+```
+
 <div class="home-card-grid">
   <a class="home-card home-card-vault internal-link" data-href="🧭 OS/README" href="🧭 OS/README">
     <span class="home-card-kicker">SYSTEM · VAULT</span>

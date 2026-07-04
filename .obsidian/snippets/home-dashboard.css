@@ -61,6 +61,10 @@
   margin-top: 1rem;
 }
 
+.home-dashboard .home-clock-runtime {
+  display: none !important;
+}
+
 .home-dashboard .home-card-grid,
 .home-dashboard .home-panel-grid {
   display: grid;
@@ -208,4 +212,53 @@
   .home-dashboard .home-panel-grid { grid-template-columns: 1fr; }
   .home-dashboard .home-card { aspect-ratio: 2 / 1; }
   .home-dashboard .home-masthead { padding-top: 2rem; }
+}
+
+/* Project analytics dashboard */
+.project-chart-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.project-chart-card {
+  background: color-mix(in srgb, var(--background-secondary) 88%, transparent);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 14%);
+  min-width: 0;
+  padding: 1rem 1rem .8rem;
+}
+
+.project-chart-card.project-chart-wide {
+  grid-column: 1 / -1;
+}
+
+.project-chart-title {
+  color: var(--text-normal);
+  font-size: .92rem;
+  font-weight: 650;
+}
+
+.project-chart-subtitle {
+  color: var(--text-muted);
+  font-size: .72rem;
+  margin: .2rem 0 .75rem;
+}
+
+.project-chart-stage {
+  height: 260px;
+  position: relative;
+}
+
+.project-chart-wide .project-chart-stage {
+  height: var(--project-progress-height, 300px);
+}
+
+@media (max-width: 760px) {
+  .project-chart-grid { grid-template-columns: 1fr; }
+  .project-chart-card.project-chart-wide { grid-column: auto; }
+  .project-chart-stage { height: 240px; }
+  .project-chart-wide .project-chart-stage { height: 340px; }
 }
