@@ -11,4 +11,15 @@ Thumbs.db
 
 # venv
 venv/
+
+# RenderCV intermediate output (final CV files are copied into 04 Career/CV)
+rendercv_output/
+
+# CV build sources and support files; keep only the final PDF
+04 Career/CV/*
+!04 Career/CV/Do_Hung_Anh_CV.pdf
 .venv/
+
+# requirements
+requirements.txt
+rendercv_output
