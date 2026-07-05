@@ -23,6 +23,11 @@ updated: 2026-07-04
   const clock = view.querySelector(".home-clock");
   const dateElement = view.querySelector(".home-date");
 
+  if (view instanceof HTMLElement) {
+    const imageUrl = app.vault.adapter.getResourcePath("🖼️ Images/hi.webp");
+    view.style.setProperty("--home-triptych-image", `url("${imageUrl}")`);
+  }
+
   if (!clock || !dateElement) return;
 
   const weekdays = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];

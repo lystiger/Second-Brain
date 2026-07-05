@@ -5,6 +5,10 @@
   --home-blue: #70a7ff;
   --home-cyan: #5cd6d0;
   --home-violet: #a78bfa;
+  --home-card-title: #f4e8d8;
+  --home-card-copy: #d8c8b8;
+  --home-card-label: #d8b39b;
+  --home-grid-gap: 1rem;
   --metadata-display-editing: none;
   --metadata-display-reading: none;
 }
@@ -68,20 +72,23 @@
 .home-dashboard .home-card-grid,
 .home-dashboard .home-panel-grid {
   display: grid;
-  gap: 1rem;
+  gap: var(--home-grid-gap);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .home-dashboard .home-card {
-  align-items: center;
+  align-items: stretch;
   aspect-ratio: 1.45 / 1;
+  background-color: #65452f;
+  background-image: var(--home-triptych-image, none);
+  background-repeat: no-repeat;
+  background-size: calc(300% + var(--home-grid-gap) + var(--home-grid-gap)) auto;
   border: 1px solid var(--home-line);
   border-radius: 12px;
   box-shadow: 0 14px 35px rgb(0 0 0 / 20%);
-  color: #f8fbff !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: var(--home-card-title) !important;
+  display: grid;
+  grid-template-rows: 1.4rem 1fr 3rem 3rem;
   overflow: hidden;
   padding: 1.5rem;
   position: relative;
@@ -91,7 +98,12 @@
 }
 
 .home-dashboard .home-card::before {
-  background: linear-gradient(to top, rgb(18 12 9 / 92%) 0%, rgb(18 12 9 / 52%) 45%, transparent 78%);
+  background: linear-gradient(
+    to top,
+    rgb(18 12 9 / 90%) 0%,
+    rgb(18 12 9 / 66%) 52%,
+    rgb(18 12 9 / 28%) 100%
+  );
   content: "";
   inset: 0;
   pointer-events: none;
@@ -105,35 +117,53 @@
 }
 
 .home-dashboard .home-card-vault {
-  background: #65452f url("../../hi.webp") 15% center / cover no-repeat;
+  background-position: left center;
 }
 
 .home-dashboard .home-card-work {
-  background: #65452f url("../../hi.webp") 52% center / cover no-repeat;
+  background-position: center center;
 }
 
 .home-dashboard .home-card-study {
-  background: #65452f url("../../hi.webp") 88% center / cover no-repeat;
+  background-position: right center;
 }
 
 .home-dashboard .home-card-kicker {
+  align-self: start;
+  color: var(--home-card-label);
   font-size: .64rem;
-  opacity: .78;
-  position: absolute;
-  top: 1rem;
+  grid-row: 1;
+  opacity: .92;
+  position: relative;
+  z-index: 1;
 }
 
 .home-dashboard .home-card strong {
+  align-items: end;
+  align-self: stretch;
+  color: var(--home-card-title);
+  display: flex;
   font-size: 1.05rem;
-  margin-top: auto;
+  font-family: var(--font-interface);
+  font-weight: 650;
+  grid-row: 3;
+  justify-content: center;
+  margin: 0;
   position: relative;
   z-index: 1;
 }
 
 .home-dashboard .home-card > span:last-child {
+  align-items: start;
+  align-self: stretch;
+  color: var(--home-card-copy);
+  display: flex;
   font-size: .72rem;
-  margin-top: .35rem;
-  opacity: .76;
+  font-family: var(--font-interface);
+  grid-row: 4;
+  justify-content: center;
+  margin: .35rem 0 0;
+  opacity: .9;
   position: relative;
   z-index: 1;
 }
@@ -210,7 +240,13 @@
 @media (max-width: 760px) {
   .home-dashboard .home-card-grid,
   .home-dashboard .home-panel-grid { grid-template-columns: 1fr; }
-  .home-dashboard .home-card { aspect-ratio: 2 / 1; }
+  .home-dashboard .home-card {
+    aspect-ratio: 2 / 1;
+    background-size: cover;
+  }
+  .home-dashboard .home-card-vault { background-position: 15% center; }
+  .home-dashboard .home-card-work { background-position: 52% center; }
+  .home-dashboard .home-card-study { background-position: 88% center; }
   .home-dashboard .home-masthead { padding-top: 2rem; }
 }
 
