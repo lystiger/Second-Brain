@@ -45,3 +45,11 @@ Desktop.ini
 *.tmp
 *.temp
 *~
+
+# Drafts and test files
+ORIGINAL_REQUEST.md
+TEST_INFRA.md
+TEST_READY.md
+prompt_draft.md
+tests/
+
