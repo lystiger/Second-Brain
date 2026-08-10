@@ -120,7 +120,7 @@ sequenceDiagram
 ```python
 import json
 import time
-from pathlibPath
+from pathlib import Path
 
 LOG_FILE = Path("logs/inspection_events.jsonl")
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
