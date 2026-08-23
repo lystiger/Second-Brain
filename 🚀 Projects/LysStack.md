@@ -135,6 +135,7 @@ Bounded Dynamic Replanner ──[Mutations: Add/Supersede Task]───┘
 | **Phase 7** | Capability-Aware Delegation | Open-string capability registry, deterministic matching, tool actors, LysControl capability views |
 | **Phase 8** | Reactive Runtime Spine | Dynamic `TaskGraph`, event-driven `ReactiveScheduler`, `ExecutionManager`, `ObservationRegistry`, `BoundedReplanner` |
 | **Phase 8.1** | Runtime Integration & Invariant Hardening | `ReactiveJobEngine` production authority, infrastructure adapters, cycle/duplicate rejection, deadlock stalled detection, `FIRST_COMPLETED` reactivity, concurrency limits, 100% test coverage |
+| **Phase 8.1.2** | Real E2E Infrastructure & Integration Hardening | Spec path resolution, normalized `TaskNode` metadata, authoritative integration worktree on `target_branch`, task commit merge & sync from integration HEAD, direct integration verification, fail-closed error guards, full `ToolPolicy` enforcement, real multi-phase E2E suite |
 
 ---
 
