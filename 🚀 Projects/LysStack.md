@@ -1,168 +1,157 @@
 ---
 type: project
-status: complete
+status: active
 priority: high
 created: 2026-08-08
-updated: 2026-08-08
+updated: 2026-08-23
 owner: Lystiger
-tags: [project, agent-infrastructure, orchestration, multi-agent, workflow, memory]
-tech_stack: [Bash, Aider, Ollama, GitHub CLI, Claude, DeepSeek, Qwen, Codex, Markdown]
+tags: [project, agent-infrastructure, orchestration, reactive-runtime, multi-agent, lysstack, hermes-lab, lyscontrol]
+tech_stack: [Python, FastAPI, TypeScript, React, Vite, Antigravity, Gemini, Claude, Codex, Git-Worktrees, Playwright, Pytest, SSE]
 ---
 
-# LysStack
+# LysStack / Hermes Lab & LysControl
 
 ## Overview
-**LysStack** is an [[Agent Infrastructure]] and multi-agent orchestration ecosystem designed to preserve long-term project memory, coordinate LLM coding agents, standardize prompt contracts, and execute an automated 5-stage **GitHub Issue-to-PR** workflow. 
+**LysStack** (orchestration control plane hosted in `Hermes-lab`) paired with **LysControl** (operator-facing React/Vite control station) is an advanced agentic orchestration ecosystem. 
 
-Operating under the foundational philosophy **"AI assists. Humans decide."**, LysStack enforces human-in-the-loop oversight where AI subagents generate issues, plan implementation, write code, and perform code reviews, but final merge authority remains strictly with the human owner ([[Lystiger]]). Unlike heavy agent frameworks such as [[CrewAI]], [[AutoGen]], or [[LangGraph]], LysStack keeps a lightweight, markdown-first config repository model that governs target product repositories like [[SilentVoix]], [[AOI]], and [[HASC]].
+Unlike traditional fixed DAGs or sequential loop pipelines, LysStack operates on a **Reactive Runtime Spine** where a job dynamically unfolds from goals into an incremental task graph, evaluated by an event-driven scheduler, executed across isolated Git worktrees and agent personas, enriched with structured observations, verified by multi-command pipelines, and adapted via bounded replanning.
 
 ---
 
 ## System Architecture
 
-LysStack functions as the central "brain and operating system" repository. It separates workflow planning and memory governance from target product codebases. 
-
 ```mermaid
-graph TD
-    subgraph LysStack ["LysStack (Brain & Memory Repo)"]
-        OS[Operating System / Workflows]
-        MEM[Memory & Architecture Decisions]
-        ROLES[Agent Role Prompts]
-        SCRIPTS[Automation Helper Scripts]
+flowchart TB
+    subgraph UI ["LysControl (Frontend Control Station)"]
+        Station["Vite / React SPA"]
+        DAGView["Dynamic DAG Visualizer"]
+        AgentMon["Agent & Capability Inspector"]
+        EventStream["Live Event / Telemetry Feed"]
     end
 
-    subgraph Workflow ["5-Stage Issue-to-PR Pipeline"]
-        S1[1. Issue Writer: Claude] -->|gh issue create| S2[2. Planner: DeepSeek]
-        S2 -->|gh issue comment| S3[3. Local Coder: Qwen + Aider]
-        S3 -->|gh pr create| S4[4. Reviewer: Codex]
-        S4 -->|Pass / Fail Report| S5{5. Human Gate: Lystiger}
-        S5 -->|Approved| MERGE[Squash & Merge to Main]
-        S5 -->|Revision Needed| S3
+    subgraph API ["Control Plane & API Layer (FastAPI)"]
+        Router["main.py API Router"]
+        JobSvc["JobService (Runtime Registry)"]
+        EvtBus["RuntimeEventBus (SSE Broadcaster)"]
     end
 
-    subgraph ProductRepos ["Target Product Repositories"]
-        P1[[SilentVoix]]
-        P2[[AOI]]
-        P3[[HASC]]
-        P4[[Ranch]]
+    subgraph Spine ["Authoritative Reactive Runtime Spine (runtime/)"]
+        Engine["ReactiveJobEngine"]
+        TGraph["TaskGraph (Acyclic, Stalled Detection)"]
+        Sched["ReactiveScheduler (Actor Concurrency & Matching)"]
+        ExecMgr["ExecutionManager (Timeout Guards)"]
+        ObsReg["ObservationRegistry (Runtime Memory)"]
+        Replanner["BoundedReplanner (Budget-Constrained Mutations)"]
     end
 
-    LysStack --> Workflow
-    Workflow --> ProductRepos
+    subgraph CapMsg ["Capabilities & Collaboration (capabilities/ & messaging/)"]
+        CapReg["CapabilityRegistry (Deterministic Matching)"]
+        MsgMgr["MessageManager (A2A Threads & Personas)"]
+    end
+
+    subgraph Infra ["Execution Infrastructure (runner/ & adapters)"]
+        ActorAdap["HermesActorAdapter"]
+        VerifAdap["HermesVerifierAdapter"]
+        Worktrees["Git Worktree Isolation Engine"]
+        Agents["Agent Backends (Antigravity, Gemini, Claude, Codex)"]
+        Tools["Tool Registry & Direct Argv Execution"]
+    end
+
+    Station <-->|REST API + SSE Streams| Router
+    Router <--> JobSvc
+    Router <--> EvtBus
+    Router <--> MsgMgr
+
+    JobSvc --> Engine
+    Engine --> TGraph
+    Engine --> Sched
+    Engine --> ExecMgr
+    Engine --> ObsReg
+    Engine --> Replanner
+    Engine --> EvtBus
+
+    Sched --> CapReg
+    Sched --> ExecMgr
+    ExecMgr --> ActorAdap
+    Engine --> VerifAdap
+
+    ActorAdap --> Worktrees
+    ActorAdap --> Agents
+    ActorAdap --> Tools
+    VerifAdap --> Worktrees
 ```
 
 ---
 
-## Component Details
+## Reactive Runtime Spine Mechanics
 
-### 1. 5-Stage GitHub Issue-to-PR Pipeline
-Each stage in the software delivery pipeline is assigned to a specialized AI model best suited for that role:
-- **Stage 1: Issue Writer ([[Claude]])**: Inspects requirements and creates structured GitHub issues with clear non-goals, architectural bounds, and testable acceptance criteria using `gh issue create`.
-- **Stage 2: Implementation Planner ([[DeepSeek]])**: Reads the issue and posts an ordered step-by-step technical execution plan, identifying affected files, risk factors, and target verification test commands via `gh issue comment`.
-- **Stage 3: Local Coder ([[Qwen]] + [[Aider]])**: Spawns Aider hooked to a local `qwen2.5-coder` model served via [[Ollama]]. Executes incremental file edits on a git feature branch, runs verification tests, and submits a pull request with `gh pr create`.
-- **Stage 4: Code Reviewer ([[Codex]])**: Runs diff extraction with `scripts/review-diff.sh`, evaluates the PR against every acceptance criterion, checks for security regressions/leaked secrets, and posts a Pass/Conditional/Fail recommendation.
-- **Stage 5: Human Merge Gate ([[Lystiger]])**: Human owner reviews the Codex analysis and manually executes squash-merge. Auto-merging by agents is strictly prohibited by repo rules.
+LysStack replaces static pipelines with a closed-loop reactive lifecycle:
 
-### 2. Memory & Decision Vault
-LysStack maintains persistent operational memory across project lifecycles:
-- `memory/decisions.md`: Architecture Decision Records (ADRs) logging why specific stacks or constraints were chosen.
-- `memory/lessons.md`: Cumulative insights gained from project execution.
-- `memory/principles.md`: Core software engineering standards.
-- `memory/mistakes.md`: Failure modes and anti-patterns to avoid.
+```text
+User Goal / Sprint Spec
+         ↓
+    Job Record
+         ↓
+      PLANNING
+         ↓
+  Initial Task Graph
+         ↓
+Event-Driven Scheduler ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
+         ↓                                                    ↑
+Agent / Tool Execution                                        ↑
+         ↓                                                    ↑ (FIRST_COMPLETED)
+Observation & Artifact Discovery                              ↑
+         ↓                                                    ↑
+     VERIFYING                                                ↑
+         ↓                                                    ↑
+Verification Outcome ──[PASSED]──────→ COMPLETED              ↑
+         │                                                    ↑
+   [REPAIRABLE / REPLAN]                                      ↑
+         ↓                                                    ↑
+Bounded Dynamic Replanner ──[Mutations: Add/Supersede Task]───┘
+         │
+  [Budget Exhausted / Fatal] ────────→ BLOCKED
+```
+
+### Key Subsystems:
+1. **`ReactiveJobEngine`**: Authoritative production lifecycle state machine (`CREATED` → `PLANNING` → `EXECUTING` → `VERIFYING` → `REPAIRING` → `COMPLETED`/`BLOCKED`).
+2. **`TaskGraph`**: Incremental DAG with cycle rejection, duplicate protection, safe superseding, and graph deadlock (`is_stalled()`) detection.
+3. **`ReactiveScheduler`**: Capability-aware actor dispatch with per-actor concurrency limits, cleanly separating `ACTOR_BUSY` (deferral) from `NO_CAPABLE_ACTOR` (blocking).
+4. **`ExecutionManager`**: Async timeout wrapper generating `TIMED_OUT` runs and structured failures without crashing the scheduler.
+5. **`ObservationRegistry`**: Captures structured runtime memory (test results, stdout, diffs, metrics) for planner and verifier context.
+6. **`BoundedReplanner`**: Dynamic graph mutation strictly constrained by `max_replans_per_job`, `max_tasks_per_job`, and `max_task_attempts`.
+7. **`HermesActorAdapter` & `HermesVerifierAdapter`**: Low-level infrastructure adapters isolating Git worktrees, tool execution, agent CLIs, and multi-command verification test suites.
 
 ---
 
-## Data Flow
+## Project Evolution & Phases
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Human as Lystiger (Human)
-    participant Claude as Claude (Issue Writer)
-    participant DeepSeek as DeepSeek (Planner)
-    participant Qwen as Qwen + Aider (Coder)
-    participant Codex as Codex (Reviewer)
-    participant GitHub as GitHub Repo / API
-
-    Human->>Claude: Define feature request
-    Claude->>GitHub: gh issue create (Acceptance Criteria)
-    Human->>DeepSeek: Approve issue scope
-    DeepSeek->>GitHub: gh issue comment (Execution Plan)
-    Human->>Qwen: Approve execution plan
-    Qwen->>Qwen: git switch -c feature/branch
-    Qwen->>Qwen: Execute code changes via Aider + Ollama
-    Qwen->>GitHub: gh pr create
-    Codex->>GitHub: Run scripts/review-diff.sh & review PR
-    Codex->>GitHub: gh pr comment (Pass / Conditional / Fail)
-    Human->>GitHub: Review recommendation & gh pr merge
-```
+| Phase / Sprint | Focus & Milestone | Key Deliverables |
+|---|---|---|
+| **Sprint 01–02** | Initial Scaffolding & Git Worktrees | FastAPI control plane, `/health`, `/version`, Git worktree isolation per sprint |
+| **Sprint 03–04** | Agent Adapters & Backends | First-class adapters (Antigravity, Claude, Codex), subprocess & Herdr backends |
+| **Sprint 05–06 / Phase 5** | Three-Agent Delivery & Verification | Antigravity (Scaffold) → Claude (Harden) → Codex (Verify), generic Playwright/npm/pytest pipeline, external repository support, Control REST API |
+| **Phase 6 & 6.1** | A2A Messaging & Persona Threads | Agent-to-Agent communication protocol, conversation threads, persona context, SSE live event bus |
+| **Phase 7** | Capability-Aware Delegation | Open-string capability registry, deterministic matching, tool actors, LysControl capability views |
+| **Phase 8** | Reactive Runtime Spine | Dynamic `TaskGraph`, event-driven `ReactiveScheduler`, `ExecutionManager`, `ObservationRegistry`, `BoundedReplanner` |
+| **Phase 8.1** | Runtime Integration & Invariant Hardening | `ReactiveJobEngine` production authority, infrastructure adapters, cycle/duplicate rejection, deadlock stalled detection, `FIRST_COMPLETED` reactivity, concurrency limits, 100% test coverage |
 
 ---
 
-## Key Code Snippets
+## Runtime Invariants & Safety Guarantees
 
-### Aider + Local Qwen Launcher (`scripts/start-qwen-aider.sh`)
-This shell script configures and launches Aider tied to a local Ollama instance running Qwen2.5-Coder without exposing API keys:
-
-```bash
-#!/usr/bin/env bash
-# start-qwen-aider.sh - Launch Aider with local Qwen model for LysStack pipeline
-set -euo pipefail
-
-QWEN_MODEL="${QWEN_MODEL:-ollama/qwen2.5-coder:7b}"
-OLLAMA_API_BASE="${OLLAMA_API_BASE:-http://localhost:11434}"
-
-if ! command -v aider >/dev/null 2>&1; then
-  echo "Error: 'aider' is not installed or not on PATH." >&2
-  exit 1
-fi
-
-if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  echo "Warning: not inside a git repository." >&2
-fi
-
-echo "Starting Aider with model ${QWEN_MODEL} at ${OLLAMA_API_BASE}"
-export OLLAMA_API_BASE
-
-exec aider --model "${QWEN_MODEL}" "$@"
-```
-
-### GitHub Command Execution Flow (`operating_system/github-issue-to-pr.md`)
-```bash
-# Stage 1: Issue creation
-gh issue create --title "Add CSV export" --body-file issue.md --label feature
-
-# Stage 2: Plan posting
-gh issue comment 42 --body-file plan.md
-
-# Stage 3: Coding & PR creation
-git switch -c feature/42-csv-export
-~/projects/LysStack/scripts/start-qwen-aider.sh
-git push -u origin feature/42-csv-export
-gh pr create --fill --base main
-
-# Stage 4: Reviewing diff
-~/projects/LysStack/scripts/review-diff.sh main > review.txt
-gh pr comment 43 --body-file review.txt
-
-# Stage 5: Human merge
-gh pr merge 43 --squash
-```
-
----
-
-## Learnings & Best Practices
-1. **Model Specialization Over Single-Agent Monoliths**: Splitting tasks into specialized roles (Claude for spec writing, DeepSeek for planning, Qwen for coding, Codex for review) yields far higher quality than relying on a single prompt.
-2. **Local-First Privacy**: Using local Qwen2.5-Coder via [[Ollama]] keeps codebase changes private and minimizes token costs during intense iterative coding sessions.
-3. **Hard Human Gates**: Enforcing human approval at Stage 5 prevents rogue AI merges and keeps overall code quality and architecture aligned with human intent.
+1. **Acyclic Graph Integrity**: `add_dependency` validates reachability, rejecting cycles with `ValueError`.
+2. **Deterministic Deadlock Detection**: Stalled dependency graphs immediately transition to `BLOCKED` or trigger replans without waiting for step timeouts.
+3. **Safe Mutation**: Tasks with active dependents cannot be deleted; they must be superseded via `supersede_task()`.
+4. **Terminal State Immutability**: Terminal states (`BLOCKED`, `COMPLETED`, `CANCELLED`) guard against illegal state transitions back into active states.
+5. **Actor Concurrency Safety**: When an actor reaches max concurrency, tasks remain `READY` and are deferred without false blocking.
 
 ---
 
 ## Related Notes
 - [[Multi-Agent]] — Multi-agent orchestration strategies & patterns
-- [[K3 Day 09 - Multi-Agent Systems & A2A Collaboration]] — Multi-agent design principles from K3 AI Program
-- [[GitHub CLI]] — Terminal workflow for issue and pull request automation
+- [[K3 Day 09 - Multi-Agent Systems & A2A Collaboration]] — Multi-agent design principles
 - [[Aider]] — Terminal-based AI pair programming tool
 - [[Ollama]] — Local LLM inference server
-- [[feynman]] — Open-source AI research agent CLI
 - [[Sentinel]] — Local-first SQLite project memory CLI
+- [[feynman]] — Open-source AI research agent CLI
