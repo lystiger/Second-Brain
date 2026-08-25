@@ -179,4 +179,4 @@ def note(content: str = typer.Argument(..., help="The note content to record")):
 1. **Local-First Developer Ergonomics**: Storing state locally in [[SQLite]] and rendering into Markdown delivers instant responsiveness, full offline capabilities, and git-native team sharing.
 2. **Upward Directory Traversal**: Emulating `git` directory traversal (`.sentinel/` discovery) provides intuitive CLI usability regardless of working directory depth.
 3. **Deterministic Summarization First**: Rule-based summary generators provide immediate utility without introducing external API costs, rate limits, or network dependencies.
-4. **Integration Ecosystem**: Related to [[Typer]], [[SQLModel]], [[SQLite]], [[Rich]], [[Python]], [[LysStack]], and [[K3 AI Program]].
+4. **Integration Ecosystem**: Related to [[Typer]], [[SQLModel]], [[SQLite]], [[Rich]], [[Python]], [[LysStack]], and [[K3-Course-Overview|K3 AI Course]].

@@ -204,4 +204,4 @@ graph = builder.compile()
 - [[React Native]]
 - [[Ruff]]
 - [[Pytest]]
-- [[K3 AI Program]]
+- [[K3-Course-Overview|K3 AI Course]]

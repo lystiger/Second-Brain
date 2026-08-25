@@ -175,4 +175,4 @@ def build_lstm_model(config: TrainingConfig):
 1. **The Persistence Baseline Paradox**: In stationary indoor temperature forecasting, simple persistence ($y_{t+h} = y_t$) often outperforms deep learning models across full datasets due to long unchanged intervals. Models must be evaluated specifically during **change events**.
 2. **Strict Chronological Data Splitting**: Random k-fold cross-validation causes severe temporal data leakage in time-series forecasting. Training splits must maintain strict chronological boundaries with sequence gap rejection.
 3. **Quality-Gated Edge Deployment**: Blocking [[TinyML]] / TFLite micro-compilation until a model passes rigorous benchmark quality gates prevents deploying unvalidated models to constrained microcontrollers.
-4. **Integration Ecosystem**: Related to [[TensorFlow]], [[Keras]], [[ESP32]], [[FastAPI]], [[SQLModel]], [[SQLite]], [[React]], [[MLflow]], and [[K3 AI Program]].
+4. **Integration Ecosystem**: Related to [[TensorFlow]], [[Keras]], [[ESP32]], [[FastAPI]], [[SQLModel]], [[SQLite]], [[React]], [[MLflow]], and [[K3-Course-Overview|K3 AI Course]].

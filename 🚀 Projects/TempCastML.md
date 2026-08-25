@@ -42,4 +42,4 @@ graph LR
 ## Key References & Related Notes
 - Workspace Note: [[🚀 Projects/TempCastML/TempCastML|TempCastML Documentation]]
 - Tech Stack: [[ESP32]], [[TensorFlow]], [[Keras]], [[FastAPI]], [[SQLModel]], [[SQLite]], [[React]], [[Vite]], [[MLflow]], [[Python]]
-- Learning References: [[K3 AI Program]]
+- Learning References: [[K3-Course-Overview|K3 AI Course]]

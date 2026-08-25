@@ -175,4 +175,4 @@ def import_catalogue(
 1. **Modular Monolith Discipline**: Structuring Python applications into explicit domain packages (`catalogue`, `auth`, `media`, `audit`) provides microservice-like boundaries without network latency or deployment complexities.
 2. **Double-Submit Cookie Defense**: Combining `HttpOnly` session cookies with matching `X-CSRF-Token` headers effectively neutralizes Cross-Site Request Forgery vulnerabilities in web administration portals.
 3. **Storage Key Abstraction**: Persisting abstract storage keys rather than direct file paths or S3 URLs allows changing storage providers (local volume vs S3 bucket) without modifying database records.
-4. **Integration Ecosystem**: Related to [[FastAPI]], [[SQLModel]], [[PostgreSQL]], [[Alembic]], [[Next.js]], [[React]], [[TypeScript]], [[Docker]], [[uv]], and [[K3 AI Program]].
+4. **Integration Ecosystem**: Related to [[FastAPI]], [[SQLModel]], [[PostgreSQL]], [[Alembic]], [[Next.js]], [[React]], [[TypeScript]], [[Docker]], [[uv]], and [[K3-Course-Overview|K3 AI Course]].

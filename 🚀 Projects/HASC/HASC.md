@@ -195,4 +195,4 @@ async def process_image_task(db: AsyncSession, task: DBTask):
 1. **DB-Backed Light Queue Pattern**: For applications with moderate background workloads, leveraging [[PostgreSQL]] transactional task tables avoids the operational overhead of managing external brokers (Redis/RabbitMQ) while providing ACID-compliant task persistence.
 2. **Resilient Temp Cleanup Strategy**: Cleaning up raw temp uploads only upon reaching terminal states (`COMPLETED` or max-retried `FAILED`) ensures zero file loss during worker process crashes or transient I/O glitches.
 3. **Structured Readiness Probes**: Testing write permissions on media mounts during readiness checks prevents silent upload failures in containerized deployments (`Docker`, `Railway`).
-4. **Integration Ecosystem**: Related to [[FastAPI]], [[PostgreSQL]], [[SQLAlchemy]], [[Alembic]], [[Pillow]], [[Docker]], and [[K3 AI Program]].
+4. **Integration Ecosystem**: Related to [[FastAPI]], [[PostgreSQL]], [[SQLAlchemy]], [[Alembic]], [[Pillow]], [[Docker]], and [[K3-Course-Overview|K3 AI Course]].

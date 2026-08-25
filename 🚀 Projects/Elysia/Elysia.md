@@ -198,4 +198,4 @@ export async function* streamOllamaCompletion(
 - [[Ollama]]
 - [[Framer Motion]]
 - [[Playwright]]
-- [[K3 AI Program]]
+- [[K3-Course-Overview|K3 AI Course]]

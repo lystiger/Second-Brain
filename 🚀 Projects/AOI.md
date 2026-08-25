@@ -189,4 +189,4 @@ async def create_inspection_run(file: UploadFile = File(...)):
 - [[Grafana]]
 - [[Docker]]
 - [[OpenCV]]
-- [[K3 AI Program]]
+- [[K3-Course-Overview|K3 AI Course]]

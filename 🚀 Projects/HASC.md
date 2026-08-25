@@ -41,4 +41,4 @@ graph LR
 ## Key References & Related Notes
 - Workspace Note: [[🚀 Projects/HASC/HASC|HASC Documentation]]
 - Tech Stack: [[FastAPI]], [[PostgreSQL]], [[SQLAlchemy]], [[Alembic]], [[Pillow]], [[React]], [[Vite]], [[TypeScript]], [[Docker]]
-- Learning References: [[K3 AI Program]]
+- Learning References: [[K3-Course-Overview|K3 AI Course]]
