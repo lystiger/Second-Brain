@@ -17,7 +17,9 @@ tags:
 
 ## 1. Executive Overview
 
-High-quality AI models and RAG systems require reliable, resilient data pipelines. Day 17 implements an enterprise-grade **Medallion Data Architecture** (Bronze $ightarrow$ Silver $ightarrow$ Gold) supporting streaming Change Data Capture (CDC), batch document ingestion, data quality contracts, quarantine tables, and OLAP processing via **DuckDB** and **dbt**.
+High-quality AI models and RAG systems require reliable, resilient data pipelines. Day 17 implements an enterprise-grade **Medallion Data Architecture** (Bronze $
+ightarrow$ Silver $
+ightarrow$ Gold) supporting streaming Change Data Capture (CDC), batch document ingestion, data quality contracts, quarantine tables, and OLAP processing via **DuckDB** and **dbt**.
 
 ---
 

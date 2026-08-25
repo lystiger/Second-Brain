@@ -390,6 +390,7 @@ For rapid navigation across the K3 AI Engineering knowledge base, use the direct
     - [[Track2-Day20-Model-Serving-Inference-Optimization|Day 20: Model Serving & Inference Optimization]]
     - [[Track2-Day21-CICD-for-AI-Systems-DVC-MLflow|Day 21: CI/CD for AI Systems & Release Gates]]
     - [[Track2-Day22-LLMOps-Prompt-Versioning-LangSmith-Guardrails|Day 22: LLMOps, Prompt Hub & Guardrails AI]]
+    - [[Track2-Day23-Disaster-Recovery-High-Availability-AI-Infra|Day 23: Disaster Recovery & High Availability]]
   - **Track 3 (Advanced AI & Alignment)**:
     - [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3: GraphRAG, Agent Memory, LoRA & DPO/ORPO Alignment]]
   - **Track 1 (AI Product & Governance)**:

@@ -16,9 +16,9 @@ tags:
 
 > [!NOTE]
 > **Automated Sync Telemetry**  
-> **Last Checked:** `2026-08-25 09:34:52`  
-> **Total GitHub Repositories Monitored:** `61`  
-> **Local Clones in `~/projects`:** `15`
+> **Last Checked:** `2026-08-25 11:56:20`  
+> **Total GitHub Repositories Monitored:** `63`  
+> **Local Clones in `~/projects`:** `16`
 
 This document tracks all curriculum releases, lab assignments, and active tracks for the **VinUni-AI20k** AI Engineering program across **Cohort 3 (K3)** and **Cohort 4 (K4)**.
 
@@ -30,7 +30,7 @@ This document tracks all curriculum releases, lab assignments, and active tracks
 flowchart TB
     P1["Phase 1: Core AI Engineering (Days 01-16)<br/>LLM APIs, ReAct Agents, RAG, Observability, Guardrails, Cloud Infra"]
     T1["Track 1: AI Product & Governance (Days 17-22+)<br/>AI Evaluation, Responsible AI in Production, Release Gates"]
-    T2["Track 2: AI Infrastructure & MLOps (Days 16-22+)<br/>Data Pipelines, Lakehouse, Vector Stores, Model Serving, CI/CD, LLMOps"]
+    T2["Track 2: AI Infrastructure & MLOps (Days 16-23+)<br/>Data Pipelines, Lakehouse, Vector Stores, Model Serving, CI/CD, LLMOps, Disaster Recovery"]
     T3["Track 3: Advanced AI & Alignment (Days 17-22+)<br/>Zep Memory, GraphRAG, Multi-Agent, LoRA Finetuning, DPO/ORPO Alignment"]
     
     P1 --> T1
@@ -94,7 +94,7 @@ flowchart TB
 ---
 
 ## Track 2: AI Infrastructure & MLOps
-*Total Repositories: 8*
+*Total Repositories: 9*
 
 | Repository Name | Cohort / Stage | Local Status | Associated Study Note | Description | Last Updated |
 | :--- | :--- | :---: | :---: | :--- | :--- |
@@ -102,18 +102,20 @@ flowchart TB
 | [Day17-Track2-DataPipeline](https://github.com/VinUni-AI20k/Day17-Track2-DataPipeline) | `Day 17` | ✅ Cloned (`Day17-Track2-DataPipeline`) | [[Track2-Day17-Data-Pipelines-ETL-Stream-Batch|Track 2 Day 17]] | — | 2026-08-16 |
 | [Day18-Track2-Lakehouse-Lab](https://github.com/VinUni-AI20k/Day18-Track2-Lakehouse-Lab) | `Day 18` | ✅ Cloned (`Day18-Track2-Lakehouse-Lab`) | [[Track2-Day18-Lakehouse-Architecture-Iceberg-Delta|Track 2 Day 18]] | Day18-Track2-Lakehouse-Lab | 2026-08-18 |
 | [Day19-Track2-VectorFeatureStore-Lab](https://github.com/VinUni-AI20k/Day19-Track2-VectorFeatureStore-Lab) | `Day 19` | ✅ Cloned (`Day19-Track2-VectorFeatureStore-Lab`) | [[Track2-Day19-Vector-Feature-Stores-Hybrid-Search-Feast|Track 2 Day 19]] | Day19-Track2-VectorFeatureStore-Lab | 2026-08-18 |
-| [Day20-Track2-ModelServing-Lab](https://github.com/VinUni-AI20k/Day20-Track2-ModelServing-Lab) | `Day 20` | ✅ Cloned (`Day20-Track2-ModelServing-Lab`) | [[Track2-Day20-Model-Serving-Inference-Optimization|Track 2 Day 20]] | Day20-Track2-ModelServing-Lab | 2026-08-19 |
+| [Day20-Track2-ModelServing-Lab](https://github.com/VinUni-AI20k/Day20-Track2-ModelServing-Lab) | `Day 20` | ✅ Cloned (`Day20-Track2-ModelServing-Lab`) | [[Track2-Day20-Model-Serving-Inference-Optimization|Track 20 Note]] | Day20-Track2-ModelServing-Lab | 2026-08-19 |
 | [K3-Track2-Day21-CI-CD-for-AI-Systems](https://github.com/VinUni-AI20k/K3-Track2-Day21-CI-CD-for-AI-Systems) | `Day 21` | ✅ Cloned (`K3-Track2-Day21-CI-CD-for-AI-Systems`) | [[Track2-Day21-CICD-for-AI-Systems-DVC-MLflow|Track 2 Day 21]] | — | 2026-08-21 |
 | [K4-Track2-Day21-CI-CD-for-AI-Systems](https://github.com/VinUni-AI20k/K4-Track2-Day21-CI-CD-for-AI-Systems) | `Day 21` | ☁️ Upstream | [[Track2-Day21-CICD-for-AI-Systems-DVC-MLflow|Track 2 Day 21]] | — | 2026-08-21 |
 | [Day22-Track2-LLMops-Prompt-versioning](https://github.com/VinUni-AI20k/Day22-Track2-LLMops-Prompt-versioning) | `Day 22` | ✅ Cloned (`Day22-Track2-LLMops-Prompt-versioning`) | [[Track2-Day22-LLMOps-Prompt-Versioning-LangSmith-Guardrails|Track 2 Day 22]] | — | 2026-08-24 |
+| [Day23-DisaterRecovery4AIInfrastructure](https://github.com/VinUni-AI20k/Day23-DisaterRecovery4AIInfrastructure) | `Day 23` | ✅ Cloned (`Day23-DisaterRecovery4AIInfrastructure`) | [[Track2-Day23-Disaster-Recovery-High-Availability-AI-Infra|Track 2 Day 23]] | — | 2026-08-25 |
 
 ---
 
 ## Track 3: Advanced AI & Model Alignment
-*Total Repositories: 9*
+*Total Repositories: 10*
 
 | Repository Name | Cohort / Stage | Local Status | Associated Study Note | Description | Last Updated |
 | :--- | :--- | :---: | :---: | :--- | :--- |
+| [phase2-k3-4-track3-day8-langgraph-agent](https://github.com/VinUni-AI20k/phase2-k3-4-track3-day8-langgraph-agent) | `Day 08` | ☁️ Upstream | [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3 Overview]] | — | 2026-08-25 |
 | [Day17-Track3-ZepMemory4Agent](https://github.com/VinUni-AI20k/Day17-Track3-ZepMemory4Agent) | `Day 17` | ☁️ Upstream | [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3 Overview]] | — | 2026-08-16 |
 | [Day19-Track3-GraphRAG](https://github.com/VinUni-AI20k/Day19-Track3-GraphRAG) | `Day 19` | ☁️ Upstream | [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3 Overview]] | — | 2026-08-19 |
 | [Day21-Track3-Finetuning-Lab](https://github.com/VinUni-AI20k/Day21-Track3-Finetuning-Lab) | `Day 21` | ☁️ Upstream | [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3 Overview]] | VinUni AICB · Day 21 Track 3 · LoRA fine-tuning lab — three frozen baselines + a four-group regression gate. Sibling of Day22-Track3-DPO-Alignment-Lab. | 2026-08-21 |
