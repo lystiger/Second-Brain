@@ -2,11 +2,16 @@
 type: dashboard
 status: active
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-08-25
 tags: [dashboard, learning]
 ---
 
 # Learning Dashboard
+
+## Course & Curriculum Trackers
+
+- [[VinUni-AI20k-Curriculum-Schedule|VinUni-AI20k Curriculum & Repository Schedule]]
+- [[K3-Course-Overview|K3 AI Engineering Master MOC]]
 
 ## Roadmaps
 
@@ -38,9 +43,9 @@ sort by due
 
 ## Domain Maps
 
-- [[🧠 Learning/AI/What is AI|Artificial Intelligence]]
-- [[🧠 Learning/AI/ML/ML Fundamentals|Machine Learning]]
-- [[🧠 Learning/AI/DL/Deep Learning Chapter 1|Deep Learning]]
-- [[🧠 Learning/AI/GenAI/Transformer/What is Transformer|Transformers]]
-- [[🧠 Learning/Roadmaps/MLOps Roadmap|MLOps]]
-- [[🧠 Learning/Roadmaps/System Design Roadmap|System Design]]
+- [[What is AI|Artificial Intelligence]]
+- [[ML Fundamentals|Machine Learning]]
+- [[What is Transformer|Transformers]]
+- [[MLOps Roadmap|MLOps]]
+- [[System Design Roadmap|System Design]]
+
