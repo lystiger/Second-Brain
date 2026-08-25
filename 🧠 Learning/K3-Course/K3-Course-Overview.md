@@ -378,6 +378,24 @@ For rapid navigation across the K3 AI Engineering knowledge base, use the direct
   - [[K3-Day10-Data-Pipeline-And-Observability|Day 10: Data Pipelines & LLM Observability]]
   - [[K3-Day11-Guardrails-HITL-Responsible-AI|Day 11: Guardrails, Human-in-the-Loop & Responsible AI]]
   - [[K3-Day12-Cloud-Services-And-Deployment|Day 12: Cloud Services & Production Agent Deployment]]
+  - [[K3-Day13-Observability-Telemetry-Metrics|Day 13: Distributed LLM Observability & Telemetry]]
+  - [[K3-Day14-AI-Evaluation-Benchmarking|Day 14: AI Evaluation & LLM-as-a-Judge Benchmarking]]
+
+- 🚀 **Specialized Tracks & Advanced Systems**
+  - **Track 2 (AI Infrastructure & MLOps)**:
+    - [[Track2-Day16-Cloud-AI-Infrastructure-Ray|Day 16: Cloud AI Infrastructure & Ray Clusters]]
+    - [[Track2-Day17-Data-Pipelines-ETL-Stream-Batch|Day 17: Data Pipelines & Medallion Ingestion]]
+    - [[Track2-Day18-Lakehouse-Architecture-Iceberg-Delta|Day 18: Lakehouse & Open Table Formats]]
+    - [[Track2-Day19-Vector-Feature-Stores-Hybrid-Search-Feast|Day 19: Vector Feature Stores & Hybrid Search]]
+    - [[Track2-Day20-Model-Serving-Inference-Optimization|Day 20: Model Serving & Inference Optimization]]
+    - [[Track2-Day21-CICD-for-AI-Systems-DVC-MLflow|Day 21: CI/CD for AI Systems & Release Gates]]
+    - [[Track2-Day22-LLMOps-Prompt-Versioning-LangSmith-Guardrails|Day 22: LLMOps, Prompt Hub & Guardrails AI]]
+  - **Track 3 (Advanced AI & Alignment)**:
+    - [[Track3-Overview-Advanced-AI-GraphRAG-Alignment|Track 3: GraphRAG, Agent Memory, LoRA & DPO/ORPO Alignment]]
+  - **Track 1 (AI Product & Governance)**:
+    - [[Track1-Overview-AI-Product-Governance-Responsible-AI|Track 1: AI Product Management & Responsible AI Governance]]
+  - **Master Curriculum Schedule**:
+    - [[VinUni-AI20k-Curriculum-Schedule|VinUni-AI20k Master Curriculum & Repository Schedule]]
 
 ---
 *K3 AI Engineering & Agentic Systems Curriculum Map of Content complete and fully verified.*
